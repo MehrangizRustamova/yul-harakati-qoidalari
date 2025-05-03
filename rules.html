@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo'l Qoidalari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">Yo'l Qoidalari</div>
+            <div class="nav-controls">
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-bottom: 80px;">
+        <section id="rules">
+            <h2 data-uz="Yo'l Qoidalari" data-ru="Правила Дорожного Движения">Yo'l Qoidalari</h2>
+            <div class="rules-grid" style="gap: 5mm;">
+                <div class="rule-card" style="margin-bottom: 5mm;">
+                    <h3 data-uz="Tezlik chegarasi" data-ru="Ограничение скорости">Tezlik chegarasi</h3>
+                    <p data-uz="Shahar ichida - 60 km/soat, shahar tashqarisida - 90 km/soat" data-ru="В городе - 60 км/ч, за городом - 90 км/ч">Shahar ichida - 60 km/soat, shahar tashqarisida - 90 km/soat</p>
+                </div>
+                <div class="rule-card" style="margin-bottom: 5mm;">
+                    <h3 data-uz="Chiroqlar" data-ru="Светофор">Chiroqlar</h3>
+                    <p data-uz="Qizil - to'xtash, sariq - tayyorlanish, yashil - harakatlanish" data-ru="Красный - стоп, желтый - приготовиться, зеленый - движение">Qizil - to'xtash, sariq - tayyorlanish, yashil - harakatlanish</p>
+                </div>
+                <div class="rule-card" style="margin-bottom: 5mm;">
+                    <h3 data-uz="Kamar bog'lash" data-ru="Ремень безопасности">Kamar bog'lash</h3>
+                    <p data-uz="Haydovchi va yo'lovchilar kamar bog'lashi majburiy" data-ru="Водитель и пассажиры обязаны пристегнуться">Haydovchi va yo'lovchilar kamar bog'lashi majburiy</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px 0; position: fixed; bottom: 0; width: 100%; background-color: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div class="page-navigation">
+            <a href="index.html" class="nav-btn" data-uz="Bosh Sahifaga Qaytish" data-ru="Вернуться на Главную" style="display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; transition: all 0.3s ease;">Bosh Sahifaga Qaytish</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

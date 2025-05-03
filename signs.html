@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo'l Belgilari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .signs-categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3mm;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .category-btn {
+            width: 100%;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+            color: #000000;
+        }
+
+        .category-btn:hover {
+            background: #f5f5f5;
+            transform: translateX(5px);
+        }
+
+        .category-btn img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .category-btn h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .signs-categories {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">Yo'l Belgilari</div>
+            <div class="nav-controls">
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-bottom: 80px;">
+        <section id="signs">
+            <h2 data-uz="Yo'l Belgilari" data-ru="Дорожные Знаки">Yo'l Belgilari</h2>
+            <div class="signs-categories">
+                <button class="category-btn" onclick="showCategory('warning')">
+                    <img src="images\bel\ogohlantiruvchi.png" alt="Ogohlantiruvchi belgilar">
+                    <h3>Ogohlantiruvchi belgilar</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('priority')">
+                    <img src="priority-sign.https://www.google.com/url?sa=i&url=https%3A%2F%2F24pdd.uz%2F2-imtiyoz-belgilari%2F&psig=AOvVaw1vd8rvSWOR_xxsDD6hwV_6&ust=1746341732345000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPiMmIn3ho0DFQAAAAAdAAAAABAEpng" alt="Imtiyoz belgilari">
+                    <h3>Imtiyoz belgilari</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('prohibitory')">
+                    <img src="prohibitory-sign.https://www.google.com/url?sa=i&url=https%3A%2F%2F24pdd.uz%2F3-taqiqlovshi-belgilar%2F&psig=AOvVaw1pI2Eil7tS_5ukbgFEz1ML&ust=1746341895553000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCIipmNT3ho0DFQAAAAAdAAAAABAEpng" alt="Taqiqlovchi belgilar">
+                    <h3>Taqiqlovchi belgilar</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('mandatory')">
+                    <img src="mandatory-sign.https://www.google.com/url?sa=i&url=https%3A%2F%2F24pdd.uz%2F4-buyuruvshi-belgilar%2F&psig=AOvVaw011KU5cT4-xw8v1sC_epAD&ust=1746341969217000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCMCfrvr3ho0DFQAAAAAdAAAAABAEpng" alt="Buyuruvchi belgilar">
+                    <h3>Buyuruvchi belgilar</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('information')">
+                    <img src="information-sign.https://www.google.com/url?sa=i&url=https%3A%2F%2F24pdd.uz%2F5-axborot-ko-rsatgish-belgilari%2F&psig=AOvVaw2K7V0YsxzyKX0WthaVyz3l&ust=1746342020567000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCMCu54_4ho0DFQAAAAAdAAAAABAEpng" alt="Axborot-ko'rsatkich belgilar">
+                    <h3>Axborot-ko'rsatkich belgilar</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('service')">
+                    <img src="service-sign.https://www.google.com/imgres?q=servis%20belgilar%20rasmi&imgurl=https%3A%2F%2F24pdd.uz%2Fwp-content%2Fuploads%2F2024%2F06%2F6.3.3_resize-min.png&imgrefurl=https%3A%2F%2F24pdd.uz%2F6-servis-belgilari%2F&docid=n_uRE0aDrXjkEM&tbnid=QQetgaH6bcUhuM&vet=12ahUKEwjIlvjX3YaNAxVAIBAIHVpjG78QM3oFCIIBEAA..i&w=160&h=240&hcb=2&ved=2ahUKEwjIlvjX3YaNAxVAIBAIHVpjG78QM3oFCIIBEAApng" alt="Servis belgilari">
+                    <h3>Servis belgilari</h3>
+                </button>
+
+                <button class="category-btn" onclick="showCategory('additional')">
+                    <img src="additional-sign.https://support.google.com/legal/answer/3463239?hl=rupng" alt="Qo'shimcha axborot belgilari">
+                    <h3>Qo'shimcha axborot belgilari</h3>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px 0; position: fixed; bottom: 0; width: 100%; background-color: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div class="page-navigation">
+            <a href="index.html" class="nav-btn" data-uz="Bosh Sahifaga Qaytish" data-ru="Вернуться на Главную" style="display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; transition: all 0.3s ease;">Bosh Sahifaga Qaytish</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

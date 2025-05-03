@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">Yo'l Qoidalari</div>
+            <div class="nav-controls">
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-bottom: 80px;">
+        <section id="signs">
+            <h2 data-uz="Test" data-ru="Тест">Test</h2>
+            <div id="quiz-container" style="margin-bottom: 5mm;">
+                <div class="quiz-start">
+                    <h3 data-uz="Testni boshlash" data-ru="Начать тест">Testni boshlash</h3>
+                    <p data-uz="Test 10 ta savoldan iborat. Har bir savol uchun 1 daqiqa vaqt beriladi."
+                       data-ru="Тест состоит из 10 вопросов. На каждый вопрос дается 1 минута."
+                       style="margin-bottom: 8mm;">
+                        Test 10 ta savoldan iborat. Har bir savol uchun 1 daqiqa vaqt beriladi.
+                    </p>
+                    <button id="startQuiz" data-uz="Boshlash" data-ru="Начать" style="margin-bottom: 8mm;">Boshlash</button>
+                </div>
+
+                <!-- Test savollari uchun yangi qism -->
+                <div id="quiz-questions" style="display: none;">
+                    <div class="question-container" style="margin-bottom: 20px;">
+                        <h3 id="question-text" style="margin-bottom: 15px;"></h3>
+                        <div class="options-container" style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="option-btn" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;"></button>
+                            <button class="option-btn" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;"></button>
+                            <button class="option-btn" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;"></button>
+                            <button class="option-btn" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;"></button>
+                        </div>
+                    </div>
+                    <div class="quiz-progress" style="margin-top: 20px;">
+                        <p>Savol: <span id="current-question">1</span>/20</p>
+                        <p>Xatolar: <span id="mistakes">0</span>/3</p>
+                        <div class="timer" style="margin-top: 10px;">
+                            Vaqt: <span id="timer">60</span> soniya
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test natijalarini ko'rsatish uchun yangi qism -->
+                <div id="quiz-results" style="display: none; text-align: center; margin-top: 20px;">
+                    <h3 data-uz="Test Natijalari" data-ru="Результаты теста" style="margin-bottom: 15px;">Test Natijalari</h3>
+                    
+                    <div class="result-circle" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;">
+                        <span id="percentage">0%</span>
+                    </div>
+                    
+                    <div class="result-status" style="margin-bottom: 20px;">
+                        <h4 id="status-text" data-uz="Natija" data-ru="Результат" style="margin-bottom: 10px;">Natija</h4>
+                        <p id="status-description" style="color: #666;"></p>
+                    </div>
+                    
+                    <div class="result-details" style="margin-bottom: 20px;">
+                        <p>To'g'ri javoblar: <span id="correct-answers">0</span>/10</p>
+                        <p>Xato javoblar: <span id="wrong-answers">0</span>/10</p>
+                    </div>
+                    
+                    <button onclick="retakeQuiz()" class="retry-btn" style="background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;" data-uz="Qayta topshirish" data-ru="Пересдать">
+                        Qayta topshirish
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px 0; position: fixed; bottom: 0; width: 100%; background-color: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div class="page-navigation">
+            <a href="index.html" class="nav-btn" data-uz="Bosh Sahifaga Qaytish" data-ru="Вернуться на Главную" style="display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; transition: all 0.3s ease;">Bosh Sahifaga Qaytish</a>
+        </div>
+    </footer>
+
+    <script type="module" src="quizData.js"></script>
+    <script type="module" src="quiz.js"></script>
+</body>
+</html>

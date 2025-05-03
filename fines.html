@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarimalar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">Yo'l Qoidalari</div>
+            <div class="nav-controls">
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-bottom: 80px;">
+        <section id="fines">
+            <h2 data-uz="Jarimalar va Qoida Buzarliklar" data-ru="Штрафы и Нарушения">Jarimalar va Qoida Buzarliklar</h2>
+            <div class="fines-container">
+                <div class="fine-card">
+                    <h3 data-uz="Tezlikni oshirish" data-ru="Превышение скорости">Tezlikni oshirish</h3>
+                    <p data-uz="Tezlikni 10-20 km/soat oshirish" data-ru="Превышение скорости на 10-20 км/ч">Tezlikni 10-20 km/soat oshirish</p>
+                    <p class="fine-amount" data-uz="Jarima: 1 000 000 so'm" data-ru="Штраф: 1 000 000 сум">Jarima: 1 000 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Spirtli ichimliklar ichish" data-ru="Управление в нетрезвом виде">Spirtli ichimliklar ichish</h3>
+                    <p data-uz="Spirtli ichimliklar ichib haydash" data-ru="Управление в состоянии алкогольного опьянения">Spirtli ichimliklar ichib haydash</p>
+                    <p class="fine-amount" data-uz="Jarima: 3 000 000 so'm" data-ru="Штраф: 3 000 000 сум">Jarima: 3 000 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Qizil chiroq" data-ru="Проезд на красный">Qizil chiroq</h3>
+                    <p data-uz="Qizil chiroqda o'tish" data-ru="Проезд на запрещающий сигнал светофора">Qizil chiroqda o'tish</p>
+                    <p class="fine-amount" data-uz="Jarima: 1 500 000 so'm" data-ru="Штраф: 1 500 000 сум">Jarima: 1 500 000 so'm</p>
+                </div>
+            </div>
+            <div class="more-fines" id="moreFines" style="display: none;">
+                <div class="fine-card">
+                    <h3 data-uz="Telefon bilan haydash" data-ru="Использование телефона">Telefon bilan haydash</h3>
+                    <p data-uz="Qo'l telefonidan foydalanib haydash" data-ru="Использование мобильного телефона">Qo'l telefonidan foydalanib haydash</p>
+                    <p class="fine-amount" data-uz="Jarima: 500 000 so'm" data-ru="Штраф: 500 000 сум">Jarima: 500 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Kamarni bog'lamaslik" data-ru="Непристегнутый ремень">Kamarni bog'lamaslik</h3>
+                    <p data-uz="Xavfsizlik kamarini bog'lamaslik" data-ru="Непристегнутый ремень безопасности">Xavfsizlik kamarini bog'lamaslik</p>
+                    <p class="fine-amount" data-uz="Jarima: 300 000 so'm" data-ru="Штраф: 300 000 сум">Jarima: 300 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Ta'qiqlangan joyda to'xtash" data-ru="Остановка в запрещенном месте">Ta'qiqlangan joyda to'xtash</h3>
+                    <p data-uz="To'xtash ta'qiqlangan joyda to'xtash" data-ru="Остановка в запрещенном месте">To'xtash ta'qiqlangan joyda to'xtash</p>
+                    <p class="fine-amount" data-uz="Jarima: 400 000 so'm" data-ru="Штраф: 400 000 сум">Jarima: 400 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Tezlikni 20-40 km/soat oshirish" data-ru="Превышение скорости на 20-40 км/ч">Tezlikni 20-40 km/soat oshirish</h3>
+                    <p data-uz="Tezlikni 20-40 km/soat oshirish" data-ru="Превышение скорости на 20-40 км/ч">Tezlikni 20-40 km/soat oshirish</p>
+                    <p class="fine-amount" data-uz="Jarima: 2 000 000 so'm" data-ru="Штраф: 2 000 000 сум">Jarima: 2 000 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Tezlikni 40 km/soatdan ortiq oshirish" data-ru="Превышение скорости более 40 км/ч">Tezlikni 40 km/soatdan ortiq oshirish</h3>
+                    <p data-uz="Tezlikni 40 km/soatdan ortiq oshirish" data-ru="Превышение скорости более 40 км/ч">Tezlikni 40 km/soatdan ortiq oshirish</p>
+                    <p class="fine-amount" data-uz="Jarima: 3 000 000 so'm" data-ru="Штраф: 3 000 000 сум">Jarima: 3 000 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Avtobus bekati oldida to'xtash" data-ru="Остановка перед автобусной остановкой">Avtobus bekati oldida to'xtash</h3>
+                    <p data-uz="Avtobus bekati oldida to'xtash" data-ru="Остановка перед автобусной остановкой">Avtobus bekati oldida to'xtash</p>
+                    <p class="fine-amount" data-uz="Jarima: 600 000 so'm" data-ru="Штраф: 600 000 сум">Jarima: 600 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Piyodalar o'tish joyi oldida to'xtash" data-ru="Остановка перед пешеходным переходом">Piyodalar o'tish joyi oldida to'xtash</h3>
+                    <p data-uz="Piyodalar o'tish joyi oldida to'xtash" data-ru="Остановка перед пешеходным переходом">Piyodalar o'tish joyi oldida to'xtash</p>
+                    <p class="fine-amount" data-uz="Jarima: 500 000 so'm" data-ru="Штраф: 500 000 сум">Jarima: 500 000 so'm</p>
+                </div>
+                <div class="fine-card">
+                    <h3 data-uz="Tramvay yo'lidan o'tish" data-ru="Пересечение трамвайных путей">Tramvay yo'lidan o'tish</h3>
+                    <p data-uz="Tramvay yo'lidan o'tish" data-ru="Пересечение трамвайных путей">Tramvay yo'lidan o'tish</p>
+                    <p class="fine-amount" data-uz="Jarima: 700 000 so'm" data-ru="Штраф: 700 000 сум">Jarima: 700 000 so'm</p>
+                </div>
+            </div>
+            <button id="showMoreFines" class="more-fines-button" data-uz="Ko'proq Jarimalar" data-ru="Больше Штрафов">Ko'proq Jarimalar</button>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px 0; position: fixed; bottom: 0; width: 100%; background-color: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div class="page-navigation">
+            <a href="index.html" class="nav-btn" data-uz="Bosh Sahifaga Qaytish" data-ru="Вернуться на Главную" style="display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; transition: all 0.3s ease;">Bosh Sahifaga Qaytish</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
